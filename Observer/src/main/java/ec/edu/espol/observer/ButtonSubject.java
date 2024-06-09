@@ -10,9 +10,8 @@ import javafx.scene.control.Button;
  * @author matia
  */
 public class ButtonSubject extends Button{
-   
-    public ButtonSubject(String txt) {
-        super(txt);
+    public ButtonSubject(String text) {
+        super(text);
         setOnAction((event) -> {
             click();
         });
