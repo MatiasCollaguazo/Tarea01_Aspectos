@@ -9,7 +9,9 @@ abstract aspect SubjectObserverProtocol {
 
     after(Subject s): stateChanges(s) {
         for (int i = 0; i < s.getObservers().size(); i++) {
-            ((Observer)s.getObservers().elementAt(i)).update();
+        	Observer obs = ((Observer)s.getObservers().elementAt(i));
+            obs.update();
+            obs.setSubject(s);
         }
     }
 
