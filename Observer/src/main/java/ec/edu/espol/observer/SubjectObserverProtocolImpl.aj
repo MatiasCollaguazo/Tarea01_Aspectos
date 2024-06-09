@@ -6,26 +6,14 @@ aspect SubjectObserverProtocolImpl extends SubjectObserverProtocol {
     public Object ButtonSubject.getData() { return this; }
 
     declare parents: GPaneObserver implements Observer;
-<<<<<<< Updated upstream
-    public void GPaneObserver.update(Object notifier){
-    	if (notifier!=null && notifier instanceof Subject){
-			System.out.println(notifier);
-		}
-=======
     public void GPaneObserver.update() {
         Subject notifier = this.getSubject();
-        System.out.println(notifier);
->>>>>>> Stashed changes
+        //System.out.println(notifier);
+        //System.out.println(((ButtonSubject) notifier).getText());
+        changeColor(((ButtonSubject) notifier).getText());
     }
-    /*
-     public void GPaneObserver.update() {
-        Subject notifier = this.getSubject();
-        System.out.println(notifier);
-	 }
-    */
 
     pointcut stateChanges(Subject s):
         target(s) &&
         call(void ButtonSubject.click());
-    
 }
