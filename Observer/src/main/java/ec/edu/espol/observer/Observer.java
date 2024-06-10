@@ -1,4 +1,4 @@
-package ec.edu.espol.observer;
+package main.java.ec.edu.espol.observer;
 
 interface Observer {
     void setSubject(Subject s);

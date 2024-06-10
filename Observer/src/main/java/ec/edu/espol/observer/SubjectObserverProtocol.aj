@@ -1,5 +1,5 @@
 
-package ec.edu.espol.observer;
+package main.java.ec.edu.espol.observer;
 
 import java.util.Vector;
 
