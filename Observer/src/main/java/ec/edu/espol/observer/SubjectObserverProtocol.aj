@@ -26,10 +26,12 @@ abstract aspect SubjectObserverProtocol {
         observers.addElement(obs);
         obs.setSubject(this);
     }
+    
     public void Subject.removeObserver(Observer obs) {
         observers.removeElement(obs);
         obs.setSubject(null);
     }
+    
     public Vector Subject.getObservers() { return observers; }
 
     private Subject Observer.subject = null;
